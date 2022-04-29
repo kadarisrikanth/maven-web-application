@@ -11,7 +11,7 @@ node{
 stage ('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
-
+/*
 //Execute the SonarQube Report
 stage('ExecuteSonarQubeReport'){
 sh "${mavenHome}/bin/mvn sonar:sonar"    
@@ -29,5 +29,5 @@ stage('DeployApplicationIntoTomcatServer'){
 } 
 
 }
-
+*/
 }
