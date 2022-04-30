@@ -65,11 +65,11 @@ sshagent(['4c5ecab8-d2f2-48af-b452-74effff6369a']) {
 }    
 */
 }//Try Closing
-  catch(e){
-  currentBuild.result = "FAILED"
-  }
-  finally{
+ catch(e){
+ currentBuild.result = "FAILED"
+ }
+ finally{
   
-  sendSlackNotifications(currentBuild.result)
-  }
+ sendSlackNotifications(currentBuild.result)
+ }
 }//Node Closing
