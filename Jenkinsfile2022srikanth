@@ -36,7 +36,7 @@ def mavenHome = tool name : 'maven3.8.5'
 
 try{
 
-sendSlackNotifications('STARTED')
+SendSlackNotifications('STARTED')
 //Get the code from Github Repo
 stage ('CheckoutCode'){
 git branch: 'development', credentialsId: '2f62d447-564e-4956-8c6e-2b32063c09ff', url: 'https://github.com/kadarisrikanth/maven-web-application.git'
@@ -71,6 +71,6 @@ sshagent(['4c5ecab8-d2f2-48af-b452-74effff6369a']) {
  }
  finally{
   
- sendSlackNotifications(currentBuild.result)
+ SendSlackNotifications(currentBuild.result)
  }
 }//Node Closing
